@@ -28,12 +28,14 @@ INCLUDEPATH += \
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    vertexbuf.cpp
+    vertexbuf.cpp \
+    indexbuf.cpp
 
 HEADERS += \
         mainwindow.h \
     vertexbuf.h \
-    common.h
+    common.h \
+    indexbuf.h
 
 FORMS += \
         mainwindow.ui
