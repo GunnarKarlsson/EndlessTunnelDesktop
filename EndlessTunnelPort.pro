@@ -29,7 +29,14 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     vertexbuf.cpp \
-    indexbuf.cpp
+    indexbuf.cpp \
+    data/alphabet.inl \
+    data/ascii_art.inl \
+    data/blurb.inl \
+    data/cube_geom.inl \
+    data/our_shader.inl \
+    data/strings.inl \
+    data/tunnel_geom.inl
 
 HEADERS += \
         mainwindow.h \
