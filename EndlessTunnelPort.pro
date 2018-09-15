@@ -35,7 +35,8 @@ SOURCES += \
     shaperenderer.cpp \
     util.cpp \
     shader.cpp \
-    scenemanager.cpp
+    scenemanager.cpp \
+    textrenderer.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -58,7 +59,8 @@ HEADERS += \
     shaperenderer.h \
     util.h \
     shader.h \
-    scenemanager.h
+    scenemanager.h \
+    textrenderer.h
 
 FORMS += \
         mainwindow.ui
