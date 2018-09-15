@@ -30,19 +30,27 @@ SOURCES += \
         mainwindow.cpp \
     vertexbuf.cpp \
     indexbuf.cpp \
+    ascii_to_geom.cpp \
+    scene.cpp
+
+HEADERS += \
+        mainwindow.h \
+    vertexbuf.h \
+    common.h \
+    indexbuf.h \
+    ascii_to_geom.h \
+    scene.h \
+    engine.h \
+    joystick-support.h \
+    our_key_codes.h \
+    simplegeom.h \
     data/alphabet.inl \
     data/ascii_art.inl \
     data/blurb.inl \
     data/cube_geom.inl \
     data/our_shader.inl \
     data/strings.inl \
-    data/tunnel_geom.inl
-
-HEADERS += \
-        mainwindow.h \
-    vertexbuf.h \
-    common.h \
-    indexbuf.h
+    data/tunnel_geom.inl \
 
 FORMS += \
         mainwindow.ui
