@@ -31,7 +31,11 @@ SOURCES += \
     vertexbuf.cpp \
     indexbuf.cpp \
     ascii_to_geom.cpp \
-    scene.cpp
+    scene.cpp \
+    shaperenderer.cpp \
+    util.cpp \
+    shader.cpp \
+    scenemanager.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -51,6 +55,10 @@ HEADERS += \
     data/our_shader.inl \
     data/strings.inl \
     data/tunnel_geom.inl \
+    shaperenderer.h \
+    util.h \
+    shader.h \
+    scenemanager.h
 
 FORMS += \
         mainwindow.ui
