@@ -137,3 +137,8 @@ void WelcomeScene::OnCreateWidgets() {
 void WelcomeScene::OnKillGraphics() {
     UiScene::OnKillGraphics();
 }
+
+void WelcomeScene::OnMouseDown() {
+    SceneManager * mgr = SceneManager::GetInstance();
+    mgr->RequestNewScene(new PlayScene());
+}

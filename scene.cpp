@@ -14,6 +14,7 @@ void Scene::OnPointerMove(int pointerId, const struct PointerCoords* coords) {}
 bool Scene::OnBackKeyPressed() { return false; }
 void Scene::OnKeyDown(int ourKeycode) {}
 void Scene::OnKeyUp(int ourKeycode) {}
+void Scene::OnMouseDown() {}
 void Scene::OnJoy(float x, float y) {}
 void Scene::OnScreenResized(int width, int height) {}
 void Scene::OnPause() {}

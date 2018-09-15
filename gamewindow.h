@@ -15,6 +15,7 @@ public:
     void resizeGL(int width, int height);
     void paintGL();
     void teardownGL();
+    bool eventFilter(QObject *obj, QEvent *event);
 
 public slots:
     void doFrame();

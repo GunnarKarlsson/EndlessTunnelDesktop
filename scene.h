@@ -44,6 +44,9 @@ class Scene {
         // Called when a key goes up
         virtual void OnKeyUp(int ourKeyCode);
 
+        // called when a mouse button is clicked
+        virtual void OnMouseDown();
+
         // Called when there is joystick input. joyX and joyY are in the range [-1.0,1.0].
         virtual void OnJoy(float joyX, float joyY);
 

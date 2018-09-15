@@ -17,6 +17,9 @@ GameWindow::~GameWindow()
 
 void GameWindow::initializeGL()
 {
+
+    installEventFilter(this);
+
     // Initialize OpenGL Backend
     initializeOpenGLFunctions();
     //TODO: add OpenGL version log
@@ -60,6 +63,14 @@ void GameWindow::doFrame() {
 
     // render!
     mgr->DoFrame();
+}
+
+bool GameWindow::eventFilter(QObject *obj, QEvent *event) {
+    if (event->type() == QEvent::MouseButtonPress) {
+        qDebug() << "eventFilter called" << endl;
+         SceneManager *mgr = SceneManager::GetInstance();
+         mgr->GetScene()->OnMouseDown();
+    }
 }
 
 

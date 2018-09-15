@@ -29,6 +29,8 @@ class WelcomeScene : public UiScene {
         virtual void OnKillGraphics();
 
         virtual void DoFrame();
+
+        virtual void OnMouseDown();
 };
 
 #endif // WELCOMESCENE_H
