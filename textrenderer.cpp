@@ -40,7 +40,7 @@ TextRenderer::TextRenderer(TrivialShader *t) {
     int i;
     for (i = 0; i < CHAR_CODES; ++i) {
         if (ALPHABET_ART[i]) {
-            LOGD("Creating glyph for chr %d.", i);
+            //LOGD("Creating glyph for chr %d.", i);
             mCharGeom[i] = AsciiArtToGeom(ALPHABET_ART[i], ALPHABET_SCALE);
         }
     }
