@@ -36,7 +36,8 @@ SOURCES += \
     util.cpp \
     shader.cpp \
     scenemanager.cpp \
-    textrenderer.cpp
+    textrenderer.cpp \
+    anim.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -60,7 +61,8 @@ HEADERS += \
     util.h \
     shader.h \
     scenemanager.h \
-    textrenderer.h
+    textrenderer.h \
+    anim.h
 
 FORMS += \
         mainwindow.ui
