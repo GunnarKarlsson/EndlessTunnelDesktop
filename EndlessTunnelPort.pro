@@ -89,3 +89,10 @@ HEADERS += \
 
 FORMS += \
         mainwindow.ui
+
+RESOURCES += \
+    resources.qrc
+
+DISTFILES += \
+    trivial.vert \
+    trivial.frag
