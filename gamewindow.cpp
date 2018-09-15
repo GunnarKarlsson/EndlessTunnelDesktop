@@ -1,5 +1,8 @@
 #include "gamewindow.h"
 #include <QTimer>
+#include "scenemanager.h"
+#include "welcomescene.h"
+#include "playscene.h"
 
 GameWindow::GameWindow()
 {
@@ -17,9 +20,8 @@ void GameWindow::initializeGL()
     // Initialize OpenGL Backend
     initializeOpenGLFunctions();
     //TODO: add OpenGL version log
-
-    // Set global information
-    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+    SceneManager *mgr = SceneManager::GetInstance();
+    mgr->StartGraphics();
 
     QTimer *timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(doFrame()));
@@ -47,6 +49,18 @@ void GameWindow::teardownGL()
 void GameWindow::doFrame() {
     glClear(GL_COLOR_BUFFER_BIT);
     glClearColor(0.0f, 5.0f, 7.0f, 1.0f);
+
+    SceneManager *mgr = SceneManager::GetInstance();
+    mgr->SetScreenSize(width(), height());
+    glViewport(0, 0, width(), height());
+
+    if (mIsFirstFrame) {
+        mIsFirstFrame = false;
+        mgr->RequestNewScene(new WelcomeScene());
+    }
+
+    // render!
+    mgr->DoFrame();
 }
 
 

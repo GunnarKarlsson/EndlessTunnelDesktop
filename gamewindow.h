@@ -18,6 +18,8 @@ public:
 
 public slots:
     void doFrame();
+private:
+    bool mIsFirstFrame = true;
 
 private:
 

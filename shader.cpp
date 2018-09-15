@@ -43,19 +43,19 @@ Shader::~Shader() {
 }
 
 static void _printShaderLog(GLuint shader) {
-   char buf[2048];
-   memset(buf, 0, sizeof(buf));
-   LOGE("*** Getting info log for shader %u", shader);
-   glGetShaderInfoLog(shader, sizeof(buf) - 1, NULL, buf);
-   LOGE("*** Info log:\n%s", buf);
+    char buf[2048];
+    memset(buf, 0, sizeof(buf));
+    LOGE("*** Getting info log for shader %u", shader);
+    glGetShaderInfoLog(shader, sizeof(buf) - 1, NULL, buf);
+    LOGE("*** Info log:\n%s", buf);
 }
 
 static void _printProgramLog(GLuint program) {
-   char buf[2048];
-   memset(buf, 0, sizeof(buf));
-   LOGE("*** Getting info log for program %u", program);
-   glGetProgramInfoLog(program, sizeof(buf) - 1, NULL, buf);
-   LOGE("*** Info log:\n%s", buf);
+    char buf[2048];
+    memset(buf, 0, sizeof(buf));
+    LOGE("*** Getting info log for program %u", program);
+    glGetProgramInfoLog(program, sizeof(buf) - 1, NULL, buf);
+    LOGE("*** Info log:\n%s", buf);
 }
 
 
@@ -121,8 +121,8 @@ void Shader::Compile() {
     }
     mPositionAttribLoc = glGetAttribLocation(mProgramH, "a_Position");
     if (mPositionAttribLoc < 0) {
-       LOGE("*** Couldn't get shader's a_Position attribute location.");
-       ABORT_GAME;
+        LOGE("*** Couldn't get shader's a_Position attribute location.");
+        ABORT_GAME;
     }
     LOGD("Shader compilation/linking successful.");
     glUseProgram(0);
@@ -149,10 +149,10 @@ void Shader::PushMVPMatrix(glm::mat4 *mat) {
 
 // To be called by child classes only.
 void Shader::PushPositions(int vbo_offset, int stride) {
-   MY_ASSERT(mPositionAttribLoc >= 0);
-   glVertexAttribPointer(mPositionAttribLoc, 3, GL_FLOAT, GL_FALSE, stride,
-           BUFFER_OFFSET(vbo_offset));
-   glEnableVertexAttribArray(mPositionAttribLoc);
+    MY_ASSERT(mPositionAttribLoc >= 0);
+    glVertexAttribPointer(mPositionAttribLoc, 3, GL_FLOAT, GL_FALSE, stride,
+                          BUFFER_OFFSET(vbo_offset));
+    glEnableVertexAttribArray(mPositionAttribLoc);
 }
 
 void Shader::BeginRender(VertexBuf *vbuf) {
@@ -179,7 +179,7 @@ void Shader::Render(IndexBuf *ibuf, glm::mat4* mvpMat) {
         // draw with index buffer
         ibuf->BindBuffer();
         glDrawElements(mPreparedVertexBuf->GetPrimitive(), ibuf->GetCount(), GL_UNSIGNED_SHORT,
-                BUFFER_OFFSET(0));
+                       BUFFER_OFFSET(0));
         ibuf->UnbindBuffer();
     } else {
         // draw straight from vertex buffer
@@ -237,12 +237,12 @@ const char* TrivialShader::GetVertShaderSource() {
 }
 
 const char* TrivialShader::GetFragShaderSource() {
-    return "precision mediump float;       \n"
-           "varying vec4 v_Color;          \n"
-           "void main()                    \n"
-           "{                              \n"
-           "   gl_FragColor = v_Color;     \n"
-           "}";
+    //return "precision mediump float;       \n"
+    return       "varying vec4 v_Color;          \n"
+                 "void main()                    \n"
+                 "{                              \n"
+                 "   gl_FragColor = v_Color;     \n"
+                 "}";
 }
 
 int TrivialShader::GetColorAttribLoc() {
@@ -279,7 +279,7 @@ void TrivialShader::BeginRender(VertexBuf *geom) {
 
     // push colors to shader
     glVertexAttribPointer(mColorLoc, 3, GL_FLOAT, GL_FALSE, geom->GetStride(),
-            BUFFER_OFFSET(geom->GetColorsOffset()));
+                          BUFFER_OFFSET(geom->GetColorsOffset()));
     glEnableVertexAttribArray(mColorLoc);
 
     // push tint color to shader
