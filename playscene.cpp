@@ -294,7 +294,7 @@ void PlayScene::DoFrame() {
     // clear screen
     glEnable(GL_DEPTH_TEST);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    glClearColor(0.0, 0.0, 0.6, 1.0);
+    glClearColor(0.0, 0.0, 0.0, 1.0);
 
     // rotate the view matrix according to current roll angle
     glm::vec3 upVec = glm::vec3(-sin(mRollAngle), 0, cos(mRollAngle));

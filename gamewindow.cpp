@@ -51,7 +51,7 @@ void GameWindow::teardownGL()
 
 void GameWindow::doFrame() {
     glClear(GL_COLOR_BUFFER_BIT);
-    glClearColor(0.0f, 5.0f, 7.0f, 1.0f);
+    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 
     SceneManager *mgr = SceneManager::GetInstance();
     mgr->SetScreenSize(width(), height());
