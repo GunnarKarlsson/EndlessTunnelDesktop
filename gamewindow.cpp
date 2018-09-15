@@ -37,9 +37,7 @@ void GameWindow::resizeGL(int width, int height)
 
 void GameWindow::paintGL()
 {
-    // Clear
-    //glClear(GL_COLOR_BUFFER_BIT);
-    doFrame();
+    //Do nothing
 }
 
 void GameWindow::teardownGL()
