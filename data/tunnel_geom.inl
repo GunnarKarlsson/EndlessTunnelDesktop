@@ -16,8 +16,8 @@
 #ifndef _mygame_tunnel_geom_hpp
 #define _mygame_tunnel_geom_hpp
 
-#include "engine.hpp"
-#include "game_consts.hpp"
+#include "engine.h"
+#include "gameconsts.h"
 
 // shorthand to make it simpler to hand-code the geometry below:
 // (first char is the coord, second is 'B'ottom, 'R'ight, 'L'eft or 'T'op,

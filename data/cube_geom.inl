@@ -16,7 +16,7 @@
 #ifndef _mygame_obstacle_geom_hpp
 #define _mygame_obstacle_geom_hpp
 
-#include "engine.hpp"
+#include "engine.h"
 
 /*
     H+-------+G

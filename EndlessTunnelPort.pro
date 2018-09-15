@@ -38,7 +38,16 @@ SOURCES += \
     scenemanager.cpp \
     textrenderer.cpp \
     anim.cpp \
-    uiscene.cpp
+    uiscene.cpp \
+    ourshader.cpp \
+    texture.cpp \
+    texquad.cpp \
+    welcomescene.cpp \
+    dialogscene.cpp \
+    playscene.cpp \
+    obstacle.cpp \
+    obstaclegenerator.cpp \
+    sfxman.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -64,7 +73,17 @@ HEADERS += \
     scenemanager.h \
     textrenderer.h \
     anim.h \
-    uiscene.h
+    uiscene.h \
+    ourshader.h \
+    texture.h \
+    texquad.h \
+    welcomescene.h \
+    dialogscene.h \
+    playscene.h \
+    obstacle.h \
+    gameconsts.h \
+    obstaclegenerator.h \
+    sfxman.h
 
 FORMS += \
         mainwindow.ui
