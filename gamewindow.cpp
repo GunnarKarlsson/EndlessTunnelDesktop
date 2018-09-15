@@ -63,6 +63,7 @@ void GameWindow::doFrame() {
 
     // render!
     mgr->DoFrame();
+    update();
 }
 
 bool GameWindow::eventFilter(QObject *obj, QEvent *event) {
