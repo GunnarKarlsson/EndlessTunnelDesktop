@@ -1,5 +1,6 @@
 #include "gamewindow.h"
 #include <QTimer>
+#include <QKeyEvent>
 #include "scenemanager.h"
 #include "welcomescene.h"
 #include "playscene.h"
@@ -69,9 +70,29 @@ void GameWindow::doFrame() {
 bool GameWindow::eventFilter(QObject *obj, QEvent *event) {
     if (event->type() == QEvent::MouseButtonPress) {
         qDebug() << "eventFilter called" << endl;
-         SceneManager *mgr = SceneManager::GetInstance();
-         mgr->GetScene()->OnMouseDown();
+        SceneManager *mgr = SceneManager::GetInstance();
+        mgr->GetScene()->OnMouseDown();
+    } else if (event->type() == QEvent::KeyPress) {
+        QKeyEvent* key = static_cast<QKeyEvent*>(event);
+        SceneManager *mgr = SceneManager::GetInstance();
+        switch (key->key()) {
+        case Qt::Key_A:
+            mgr->GetScene()->OnJoy(-0.3, 0.0);
+            break;
+        case Qt::Key_D:
+            mgr->GetScene()->OnJoy(0.3, 0.0);
+            break;
+        case Qt::Key_W:
+            mgr->GetScene()->OnJoy(0.0, -0.3);
+            break;
+        case Qt::Key_S:
+            mgr->GetScene()->OnJoy(0.0, 0.3);
+            break;
+        default:
+            break;
+        }
     }
+    return QObject::eventFilter(obj, event);
 }
 
 
