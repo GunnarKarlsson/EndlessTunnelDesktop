@@ -19,7 +19,7 @@
 #define OUR_VERTEX_SHADER_SOURCE \
            "uniform mat4 u_MVP;            \n" \
            "uniform vec4 u_PointLightPos;  \n" \
-           "uniform mvec4 u_PointLightColor; \n" \
+           "uniform vec4 u_PointLightColor; \n" \
            "attribute vec4 a_Position;     \n" \
            "attribute vec4 a_Color;        \n" \
            "attribute vec2 a_TexCoord;     \n" \
@@ -33,8 +33,7 @@
            "void main()                    \n" \
            "{                              \n" \
            "   v_Color = a_Color;          \n" \
-           "   gl_Position = u_MVP         \n" \
-           "               * a_Position;   \n" \
+           "   gl_Position = u_MVP * a_Position;   \n" \
            "   v_Pos = u_MVP * a_Position; \n" \
            "   v_PointLightPos = u_MVP * u_PointLightPos; \n" \
            "   v_TexCoord = a_TexCoord;    \n" \

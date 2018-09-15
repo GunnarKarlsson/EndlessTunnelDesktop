@@ -53,6 +53,7 @@ WelcomeScene::WelcomeScene() {
 }
 
 WelcomeScene::~WelcomeScene() {
+    qDebug() << "WelcomeScene::~WelcomeScene()";
 }
 
 void WelcomeScene::RenderBackground() {
@@ -74,6 +75,7 @@ void WelcomeScene::OnButtonClicked(int id) {
 }
 
 void WelcomeScene::DoFrame() {
+    //qDebug() << "WelcomeScene::DoFrame()" << endl;
     // update widget states based on signed-in status
     UpdateWidgetStates();
 
@@ -135,10 +137,10 @@ void WelcomeScene::OnCreateWidgets() {
 }
 
 void WelcomeScene::OnKillGraphics() {
+    qDebug() << "WelcomeScene::OnKillGraphics()" << endl;
     UiScene::OnKillGraphics();
 }
 
 void WelcomeScene::OnMouseDown() {
-    SceneManager * mgr = SceneManager::GetInstance();
-    mgr->RequestNewScene(new PlayScene());
+    OnButtonClicked(mPlayButtonId);
 }
