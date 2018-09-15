@@ -4,7 +4,7 @@
 #include "welcomescene.h"
 #include "playscene.h"
 
-GameWindow::GameWindow()
+GameWindow::GameWindow() : QOpenGLWindow(QOpenGLWindow::NoPartialUpdate)
 {
 
 }
@@ -38,7 +38,8 @@ void GameWindow::resizeGL(int width, int height)
 void GameWindow::paintGL()
 {
     // Clear
-    glClear(GL_COLOR_BUFFER_BIT);
+    //glClear(GL_COLOR_BUFFER_BIT);
+    doFrame();
 }
 
 void GameWindow::teardownGL()

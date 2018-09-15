@@ -8,12 +8,11 @@ int main(int argc, char *argv[])
 
     QSurfaceFormat format;
     format.setDepthBufferSize(24);
-    format.setVersion(2,1);
-    //format.setProfile(QSurfaceFormat::defaultFormat());
-    QSurfaceFormat::setDefaultFormat(format);
-
+    format.setStencilBufferSize(8);
+    //format.setVersion(2,1);
     GameWindow window;
     window.resize(800, 600);
+    window.setFormat(format);
     window.show();
 
     int major = 0;
