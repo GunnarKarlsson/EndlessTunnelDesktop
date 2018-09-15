@@ -47,7 +47,8 @@ SOURCES += \
     playscene.cpp \
     obstacle.cpp \
     obstaclegenerator.cpp \
-    sfxman.cpp
+    sfxman.cpp \
+    gamewindow.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -83,7 +84,8 @@ HEADERS += \
     obstacle.h \
     gameconsts.h \
     obstaclegenerator.h \
-    sfxman.h
+    sfxman.h \
+    gamewindow.h
 
 FORMS += \
         mainwindow.ui
