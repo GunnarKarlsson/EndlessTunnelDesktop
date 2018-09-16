@@ -9,4 +9,4 @@ Use WASD or arrow keys to steer.
 + about, story scenes.
 
 
-![Screen shots]https://github.com/GunnarKarlsson/EndlessTunnelDesktop/raw/master/screenshot.png
+![Screen shots](https://github.com/GunnarKarlsson/EndlessTunnelDesktop/raw/master/screenshot.png)
