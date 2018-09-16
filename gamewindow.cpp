@@ -77,15 +77,19 @@ bool GameWindow::eventFilter(QObject *obj, QEvent *event) {
         SceneManager *mgr = SceneManager::GetInstance();
         switch (key->key()) {
         case Qt::Key_A:
+        case Qt::Key_Left:
             mgr->GetScene()->OnJoy(-0.3, 0.0);
             break;
         case Qt::Key_D:
+        case Qt::Key_Right:
             mgr->GetScene()->OnJoy(0.3, 0.0);
             break;
         case Qt::Key_W:
+        case Qt::Key_Up:
             mgr->GetScene()->OnJoy(0.0, -0.3);
             break;
         case Qt::Key_S:
+        case Qt::Key_Down:
             mgr->GetScene()->OnJoy(0.0, 0.3);
             break;
         default:
