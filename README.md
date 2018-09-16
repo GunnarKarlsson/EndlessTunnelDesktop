@@ -7,4 +7,4 @@ To do:
 + sfx
 + about, story scenes.
 
-![alt text](https://github.com/username/repository/blob/master/screenshot.png)
+![Screen shots](https://github.com/GunnarKarlsson/EndlessTunnelDesktop/master/screenshot.png)
