@@ -7,4 +7,4 @@ To do:
 + sfx
 + about, story scenes.
 
-https://github.com/username/repository/blob/master/screenshot.png
+![alt text](https://github.com/username/repository/blob/master/screenshot.png)
