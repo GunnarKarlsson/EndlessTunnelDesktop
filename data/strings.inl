@@ -16,7 +16,7 @@
 #ifndef _mygame_strings_inl
 #define _mygame_strings_inl
 
-#define S_HOWTO_WITHOUT_JOY "WSAD or arrow keys to steer"
+#define S_HOWTO_WITHOUT_JOY "WSAD\nor arrow keys\nto steer"
 
 #define S_GOT_BONUS "+ 50"
 #define S_GAME_OVER "Game Over"
