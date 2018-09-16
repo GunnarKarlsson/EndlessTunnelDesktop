@@ -1,6 +1,8 @@
 # EndlessTunnelDesktop
 Port of the Open Source Android NDK Game "Endless Tunnel" to Desktop using Qt
 
+Original Android project code: https://github.com/googlesamples/android-ndk/tree/master/endless-tunnel
+
 # Instructions
 Use WASD or arrow keys to steer.
 
