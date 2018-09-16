@@ -7,7 +7,7 @@
 
 GameWindow::GameWindow() : QOpenGLWindow(QOpenGLWindow::NoPartialUpdate)
 {
-
+    //Do nothing
 }
 
 GameWindow::~GameWindow()

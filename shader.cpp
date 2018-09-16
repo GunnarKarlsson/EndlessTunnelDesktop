@@ -1,5 +1,3 @@
-#include "shader.h"
-
 /*
  * Copyright (C) Google Inc.
  *
@@ -15,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+#include "shader.h"
 #include "common.h"
 #include "indexbuf.h"
 #include "shader.h"
