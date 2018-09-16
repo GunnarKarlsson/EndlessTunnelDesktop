@@ -27,7 +27,6 @@ INCLUDEPATH += \
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp \
     vertexbuf.cpp \
     indexbuf.cpp \
     ascii_to_geom.cpp \
@@ -51,7 +50,6 @@ SOURCES += \
     gamewindow.cpp
 
 HEADERS += \
-        mainwindow.h \
     vertexbuf.h \
     common.h \
     indexbuf.h \
