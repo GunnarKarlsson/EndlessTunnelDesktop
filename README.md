@@ -6,7 +6,7 @@ Original Android project code: https://github.com/googlesamples/android-ndk/tree
 # Instructions
 Use WASD or arrow keys to steer.
 
-#To do:
+# To do:
 + sfx
 + about, story scenes.
 
