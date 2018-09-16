@@ -28,18 +28,7 @@ SfxMan* SfxMan::GetInstance() {
     return _instance ? _instance : (_instance = new SfxMan());
 }
 
-//static bool _checkError(SLresult r, const char *what) {
-//    //Do nothing
-//    return true;//has error
-//}
-
-//static void _bqPlayerCallback(SLAndroidSimpleBufferQueueItf bq, void *context) {
-//    _bufferActive = false;
-//}
-
-
 SfxMan::SfxMan() {
-   // Note: this initialization code was mostly copied from the NDK audio sample.
    //Do nothing
     mInitOk = false;
 }
@@ -58,7 +47,7 @@ static int _synth(int frequency, int duration, float amplitude, short *sample_bu
 }
 
 static void _taper(short *sample_buf, int samples) {
-   //DO nothing
+   //Do nothing
 }
 
 void SfxMan::PlayTone(const char *tone) {
